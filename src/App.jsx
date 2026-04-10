@@ -5,6 +5,8 @@ import StringState from "./components/StringState";
 import BooleanState from "./components/BooleanState";
 import InputState from "./components/InputState";
 import ToDo from "./components/ToDo";
+import RenderList from "./components/list-array/RenderList";
+import ObjectList from "./components/list-array/ObjectList";
 
 function App() {
   const firstName = "ensar";
@@ -17,7 +19,9 @@ function App() {
       <StringState />
       <BooleanState/>
       <InputState />
-      <ToDo/>
+      <ToDo />
+      <RenderList />
+      <ObjectList/>
     </div>
   )
 }
