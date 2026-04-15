@@ -1,32 +1,25 @@
-import Header from "./components/Header";
-import StringProp from "./components/StringProp";
-import NumberState from "./components/NumberState";
-import StringState from "./components/StringState";
-import BooleanState from "./components/BooleanState";
-import InputState from "./components/InputState";
-import ToDo from "./components/ToDo";
-import RenderList from "./components/list-array/RenderList";
-import ObjectList from "./components/list-array/ObjectList";
-import HomeWork1 from "./components/homeWorks/HomeWork1";
+import React from "react";
+import { Routes, Route } from "react-router";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
+import Header from "./components/Header/Header.jsx";
+import SingleProduct from "./pages/SingleProduct.jsx";
+import Products from "./pages/Products.jsx";
 
 function App() {
-  //const firstName = "ensar";
-  //const lastName = "aliu";
   return (
     <div>
       <Header />
-      {/* <StringProp firstName={firstName} lastName={lastName} /> */}
-      {/* <NumberState /> */}
-      {/* <StringState /> */}
-      {/* <BooleanState/> */}
-      {/* <InputState /> */}
-      {/* <ToDo /> */}
-      {/* <RenderList /> */}
-      {/* <ObjectList /> */}
-      <HomeWork1 /> 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products/:id" element={<SingleProduct />} />
+        <Route path="/products" element={<Products />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-
-export default App
+export default App;

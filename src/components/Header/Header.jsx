@@ -1,0 +1,24 @@
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
+
+function Header() {
+    return (
+        <nav>
+            <Link to="/">
+                Home
+            </Link>
+            <Link to="/about">
+                About
+            </Link>
+            <Link to="/contact">
+                Contact
+            </Link>
+            <Link to="/products">
+                Products
+            </Link>
+        </nav>
+    );
+};
+
+export default Header;
